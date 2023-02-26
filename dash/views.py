@@ -217,13 +217,6 @@ def edit_job(request, job_id):
     return render(request, 'edit_job.html', {'form': form})
 
 
-def injection(request):
- engine = engines["django"]
- template = engine.from_string("<html><body><form method=get><input name=injection><br><input type=submit></form><br>"+str(request.GET.get("injection"))+"</body></html>")
- return HttpResponse(template.render({}, request))
-
-
-
 def search_jobs(request):
     django_engine = engines['django']
     query = request.GET.get('q')
