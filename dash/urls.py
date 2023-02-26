@@ -22,7 +22,6 @@ urlpatterns = [
     path('/user_messages/<str:username>/', views.user_messages, name='user_messages'),
     #path('resumes/<path:path>', views.protected_serve, {'document_root': settings.STATICFILES_DIRS}),
     #path('/resumes/<int:pk>/download/', views.login_required(views.download_resume), name='download_resume'),
-    path('/injection', views.injection, name='injection'),
 
     # other URL patterns go here
 ]
